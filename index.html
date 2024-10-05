@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>My Website</title>
+</head>
+<body>
+    <!--Menu-->
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                <span>Bell</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#about">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#skills">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#services">Services</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="#contact">Contact</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="main-container">
+            <div class="image" data-aos="zoom-out" data-aos-duration="3000">
+                <img src="main2.jpg" alt="">
+            </div>
+            <div class="content">
+                <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Hey, I'm <span>Thiên</span> </h1>
+                <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">I'm <span class="typewriter-text"></span><label for="">|</label></div >
+                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">Chào mừng bạn đến với trang web của tôi! Tôi là Đặng Ngọc Thiên, 
+                    hiện đang là sinh viên năm 3 ngành Hệ thống Thông tin Quản lý của Trường Đại học Công Nghệ Thông Tin - Đại học Quốc gia TP.HCM</p>
+                <div class="social-links">
+                    <a href="https://github.com/bellnotash" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/dng_thieen/" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@ashbell_caesar" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1600">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                </div>
+                <div class="btn" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1800">
+                    <button>Hire me</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!--About section start-->
+    <section class="about" id="about">
+        <div class="content">
+            <div class="title" data-aos="fade-up" data-aos-duration="1500"><span>About Me</span></div>
+            <div class="about-details">
+                <div class="left" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="200">
+                    <img src="main1.PNG" alt="">
+                </div>
+                <div class="right">
+                    <div class="topic" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="200">Designing is My Pasion</div>
+                    <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="300">- Với niềm đam mê sâu sắc về thiết kế, tôi đã tự mình thực hiện một số dự án cá nhân, dù chưa có cơ hội đi làm thực tế.
+                    </br>
+                       - Dưới đây là CV của tôi, mọi người có thể tìm hiểu thêm về tôi ở đó.
+                    </p>
+                    <div class="button" data-aos="zoom-in-right" data-aos-duration="1500" data-aos-delay="400">
+                        <button>Download</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!--Skills section start-->
+    <section class="skills" id="skills">
+        <div class="content">
+            <div class="title" data-aos="fade-up" data-aos-duration="1200"><span>My Skills</span></div>
+            <div class="skills-details">
+                <div class="text">
+                    <div class="topic" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="200">Skills Refects Our Knowledge</div>
+                    <p data-aos="fade-right" data-aos-duration="1200" data-aos-delay="400">
+                        - HTML & CSS: Tôi có kiến thức cơ bản và kỹ năng thực hành để xây dựng và thiết kế các trang web tĩnh. 
+                        Tôi thành thạo việc sử dụng các thẻ HTML và thuộc tính CSS để tạo giao diện người dùng hấp dẫn và thân thiện. <br><br>
+                        - JavaScript: Với mức độ hoàn thiện 50%, tôi có khả năng sử dụng JavaScript để tạo ra các tính năng động và tương tác trên trang web. 
+                        Tôi quen thuộc với các khái niệm như biến, hàm, sự kiện và thao tác với DOM.
+                    </p>
+                    <div class="experience" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600">
+                        <div class="num">1</div>
+                        <div class="exp">
+                            Year Of <br/>
+                            Experience
+                        </div>
+                    </div>
+                </div>
+                <div class="boxes">
+                    <div class="box">
+                        <div class="topic" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="150">HTML</div>
+                        <div class="per" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="300">50%</div>
+                    </div>
+                    <div class="box">
+                        <div class="topic" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="150">CSS</div>
+                        <div class="per" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="300">50%</div>
+                    </div>
+                    <div class="box">
+                        <div class="topic" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="450">JS</div>
+                        <div class="per" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="600">50%</div>
+                    </div>
+                    <div class="box">
+                        <div class="topic" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="450">PHP</div>
+                        <div class="per" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="600">0%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <!--Services section start-->
+    <section class="services" id="services">
+        <div class="content">
+            <div class="title" data-aos="fade-up" data-aos-duration="1200"><span>My Services</span></div>
+            <div class="boxes">
+                <div class="box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+                    <div class="icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <div class="topic">Web Development</div>
+                    <p>Tôi cung cấp dịch vụ phát triển web chuyên nghiệp, từ việc xây dựng các trang web tĩnh đơn giản đến các ứng dụng web phức tạp.
+                        ôi sử dụng các công nghệ hiện đại như HTML, CSS, JavaScript, và PHP để tạo ra các trang web thân thiện với người dùng và hiệu quả.</p>
+                </div>
+                <div class="box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
+                    <div class="icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <div class="topic">Graphic Design</div>
+                    <p>Dịch vụ thiết kế đồ họa của tôi bao gồm thiết kế logo, poster, brochure, và các sản phẩm đồ họa khác. 
+                        Tôi luôn chú trọng đến yếu tố thẩm mỹ và sự hài hòa trong từng thiết kế, đảm bảo mang lại sự hài lòng cho khách hàng.</p>
+                </div>
+                <div class="box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">
+                    <div class="icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="topic">Digital Marketing</div>
+                    <p>Tôi cung cấp dịch vụ tiếp thị kỹ thuật số, bao gồm quản lý chiến dịch quảng cáo trên các nền tảng như Google Ads và Facebook Ads, SEO, và chiến lược nội dung. 
+                        Mục tiêu của tôi là giúp khách hàng tăng cường sự hiện diện trực tuyến và đạt được kết quả kinh doanh mong muốn.</p>
+                </div>
+                <div class="box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="800">
+                    <div class="icon">
+                        <i class="fas fa-android"></i>
+                    </div>
+                    <div class="topic">Icon Design</div>
+                    <p>Với dịch vụ thiết kế biểu tượng, tôi tạo ra các biểu tượng độc đáo và dễ nhận diện cho các ứng dụng, trang web, và các sản phẩm kỹ thuật số khác.
+                        Tôi luôn chú trọng đến tính thẩm mỹ và sự dễ hiểu trong từng thiết kế biểu tượng.</p>
+                </div>
+                <div class="box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1000">
+                    <div class="icon">
+                        <i class="fas fa-camera-retro"></i>
+                    </div>
+                    <div class="topic">Photography</div>
+                    <p>Dịch vụ nhiếp ảnh của tôi bao gồm chụp ảnh sự kiện, chân dung, sản phẩm, và phong cảnh. 
+                        Tôi cam kết mang đến những bức ảnh chất lượng cao, ghi lại những khoảnh khắc đẹp và ý nghĩa nhất cho khách hàng.</p>
+                </div>
+                <div class="box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1200">
+                    <div class="icon">
+                        <i class="fas fa-tablet-alt"></i>
+                    </div>
+                    <div class="topic">Apps Development</div>
+                    <p>Tôi cung cấp dịch vụ phát triển ứng dụng di động trên các nền tảng iOS và Android. 
+                        Từ việc lên ý tưởng, thiết kế giao diện đến phát triển và triển khai, tôi luôn đảm bảo mang lại những ứng dụng chất lượng và đáp ứng nhu cầu của người dùng.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Contact section start-->
+    <section class="contact" id="contact">
+        <div class="content">
+            <div class="title" data-aos="fade-up" data-aos-duration="1500"><span>Contact Me</span></div>
+            <div class="text">
+                <div class="topic" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="200">Have Any Project?</div>
+                <div class="button" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="400">
+                    <button>Let's Chat</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Footer section start-->
+    <footer>
+        <div class="text">
+            <span>Created By <a href="#">Ashbell</a> | &#169; 2024 All Rights Reserved</span>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+</body>
+</html>
