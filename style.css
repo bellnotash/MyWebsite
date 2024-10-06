@@ -455,13 +455,13 @@ footer{
     font-family: 'Poppins', sans-serif;
 }
 
-.footer .text span{
+footer .text span{
     font-size: 17px;
     font-weight: 400;
     color:#fff;
 }
 
-.footer .text span a{
+footer .text span a{
     font-weight: 500;
     color:#fff;
 }
@@ -585,7 +585,7 @@ footer.text span a:hover{
     .main-container .content{
         width:80%;
     }
-    .main-container .button{
+    .main-container button{
         margin-top:15px;
     }
     .skills-details .boxes .per{
