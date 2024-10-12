@@ -13,7 +13,7 @@ body {
   width: 100%;
   height: auto;
   overflow-x: hidden;
-  background-color: black;
+  background-color: #121212;
   padding-top: 10vh;
 }
 
@@ -79,12 +79,14 @@ nav {
 
 .nav-container .links a {
   position: relative;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: white;
   margin: 0 20px;
   text-decoration: none;
   font-weight: 550;
   transition: 0.3s linear;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .nav-container .links a::before {
@@ -176,10 +178,16 @@ section .main-container {
 .main-container .content {
   color: white;
   width: 40%;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .content h1 {
   font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
+  margin-bottom: 1rem;
 }
 
 .content h1 span {
@@ -190,6 +198,7 @@ section .main-container {
 .content .typewriter {
   font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
   font-weight: 600;
+  margin-bottom: 1.5rem;
 }
 
 .content .typewriter-text {
@@ -218,7 +227,7 @@ section .main-container {
   color: #8D493A;
   margin: 5px 15px;
   font-size: 1.5rem;
-  transition: 0.2s linear;
+  transition: all 0.3s ease;
 }
 
 .social-links i:hover {
@@ -226,20 +235,21 @@ section .main-container {
   color: black;
   background-color: #8D493A;
   filter: drop-shadow(0 0 10px #8D493A);
+  transform: translateY(-5px);
 }
 
 .content button {
   width: 50%;
   height: 6vh;
   margin: 30px;
-  background-color: #8D493A;
+  background: linear-gradient(45deg, #8D493A, #A65F4F);
   color: white;
   border: none;
   outline: none;
   font-size: 120%;
   font-weight: 700;
   border-radius: 5px;
-  transition: 0.2s linear;
+  transition: all 0.3s ease;
 }
 
 .content button:hover {
@@ -248,7 +258,8 @@ section .main-container {
   border: 2px solid #8D493A;
   background-color: transparent;
   font-weight: 700;
-  box-shadow: 0 0 40px #8D493A;
+  box-shadow: 0 5px 15px rgba(141, 73, 58, 0.4);
+  transform: translateY(-3px);
 }
 
 /*about section styling */
@@ -281,7 +292,7 @@ section .title span::after {
   position: absolute;
   height: 3px;
   width: 100%;
-  background: #8D493A;
+  background: linear-gradient(45deg, #8D493A, #A65F4F);
   left: 0;
   bottom: 0;
 }
@@ -387,6 +398,16 @@ section .button button:hover {
 .skills-details .boxes .box{
     width: calc(100%/2 - 20px);
     margin:20px 0;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+.skills-details .boxes .box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(141, 73, 58, 0.3);
 }
 .skills-details .boxes .topic{
     font-size: 20px;
@@ -413,11 +434,16 @@ section .button button:hover {
     cursor: default;
     color:white;
     transition:all 0.4s ease;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
 }
 
 .services .boxes .box:hover{
     background: #8D493A;
     color:#fff;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(141, 73, 58, 0.3);
 }
 
 .services .boxes .box .icon{
@@ -468,7 +494,7 @@ section .button button:hover {
 }
 
 footer{
-    background:#8D493A;
+    background: linear-gradient(45deg, #8D493A, #A65F4F);
     padding:15px 0;
     text-align: center;
     font-family: 'Poppins', sans-serif;
