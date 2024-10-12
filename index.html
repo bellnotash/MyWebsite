@@ -83,7 +83,10 @@
                        - Dưới đây là CV của tôi, mọi người có thể tìm hiểu thêm về tôi ở đó.
                     </p>
                     <div class="button" data-aos="zoom-in-right" data-aos-duration="1500" data-aos-delay="400">
-                        <button>Download CV</button>
+                        <button class="custom-btn btn-cv">
+                            <span>Download CV</span>
+                            <i class="fas fa-download"></i>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -202,7 +205,10 @@
             <div class="text">
                 <div class="topic" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="200">Have Any Project?</div>
                 <div class="button" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="400">
-                    <button>Let's Chat</button>
+                    <button class="custom-btn btn-chat" id="open-chat-btn">
+                        <span>Let's Chat</span>
+                        <i class="fas fa-comments"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -220,6 +226,22 @@
     <script>
       AOS.init();
     </script>
+
+    <div id="contact-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Let's Chat</h2>
+        <form id="contact-form">
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+          <input type="email" id="email" name="email" placeholder="Your Email" required>
+          <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+          <button type="submit" class="custom-btn btn-send btn-chat">
+            <span>Send</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
 
 </body>
 </html>

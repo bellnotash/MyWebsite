@@ -14,6 +14,7 @@ body {
   height: auto;
   overflow-x: hidden;
   background-color: black;
+  padding-top: 10vh;
 }
 
 /*custom scroll bar css*/
@@ -35,6 +36,12 @@ body {
 nav {
   width: 100%;
   height: 10vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  z-index: 1000;
+  transition: top 0.3s; 
 }
 .nav-container {
   width: 100%;
@@ -128,6 +135,7 @@ nav {
 section {
   width: 100%;
   min-height: 90vh;
+  margin-top: 10vh;
 }
 
 section .main-container {
@@ -192,7 +200,10 @@ section .main-container {
 .content p {
   font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);
   margin: 10px 0;
-  text-align: justify;
+  text-align: left;
+  line-height: 1.6;
+  max-width: 65ch;
+  margin: 1em auto;
 }
 
 .social-links i {
@@ -303,6 +314,9 @@ section .topic {
 .about-details .right p {
   text-align: justify;
   color: white;
+  line-height: 1.6;
+  max-width: 65ch;
+  margin: 1em auto;
 }
 section.button {
   margin: 16px 0;
@@ -343,6 +357,9 @@ section .button button:hover {
     .skills-details p{
     color: white;
     text-align: justify;
+    line-height: 1.6;
+    max-width: 65ch;
+    margin: 1em auto;
     }
         .skills .skills-details .experience{
         display: flex;
@@ -425,11 +442,13 @@ section .button button:hover {
 .services .boxes .box:hover p{
     color:white;
     transition:all 0.4s ease;
+    text-align: center;
 }
 
 .services .boxes .box:hover .topic,
 .services .boxes .box:hover p{
     color:#fff;
+    font-size: 0.9em;
 }
 
 /*contact me*/
@@ -592,4 +611,253 @@ footer.text span a:hover{
         font-size: 50px;
         color:#8D493A;
     }
+}
+
+.about .about-details .left.image-container {
+  width: 45%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.about .left.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.about .left.image-container:hover img {
+  transform: scale(1.1);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.about .left.image-container {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+  .about .about-details .left.image-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.custom-btn {
+    width: auto;
+    height: 50px;
+    padding: 10px 25px;
+    border: 2px solid #8D493A;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    z-index: 2;
+    font-size: 16px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.custom-btn span {
+    position: relative;
+    z-index: 2;
+}
+
+.custom-btn i {
+    margin-left: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.custom-btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background: #ffffff;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.custom-btn:hover::after {
+    width: 100%;
+}
+
+.custom-btn:hover {
+    color: #fff;
+    border-color: #8D493A;
+    box-shadow: 0 0 20px rgba(141, 73, 58, 0.4);
+    transform: translateY(-3px);
+}
+
+.btn-cv {
+    background: linear-gradient(45deg, #8D493A, #A65F4F);
+    border: none;
+}
+
+.btn-chat {
+    background: transparent;
+}
+
+.btn-chat:hover {
+    background: linear-gradient(45deg, #8D493A, #A65F4F);
+}
+
+@media screen and (max-width: 768px) {
+    .custom-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background-color: #1a1a1a;
+  margin: 15% auto;
+  padding: 30px;
+  border: 1px solid #8D493A;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 0 20px rgba(141, 73, 58, 0.4);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close:hover {
+  color: #8D493A;
+}
+
+.modal-content h2 {
+  text-align: center;
+  color: #8D493A;
+  margin-bottom: 20px;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-form input,
+#contact-form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #8D493A;
+  background-color: #2a2a2a;
+  color: white;
+  border-radius: 5px;
+}
+
+#contact-form textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.btn-send {
+  align-self: center;
+  margin-top: 17px;
+  width: 45%;
+  height: 50px;
+  padding: 10px 25px;
+  border: 2px solid #8D493A;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex; /* Thay đổi từ inline-block sang flex */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  color: #8D493A;
+  z-index: 2;
+  font-size: 16px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.btn-send:hover {
+  color: #fff;
+  border-color: #8D493A;
+  box-shadow: 0 0 20px rgba(141, 73, 58, 0.4);
+  transform: translateY(-3px);
+  background: linear-gradient(45deg, #8D493A, #dcd9d8);
+}
+
+.btn-send::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background: #a65f4f;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.btn-send:hover::after {
+  width: 100%;
+}
+
+.btn-send span {
+  position: relative;
+  z-index: 2;
+}
+
+.btn-send i {
+
+  position: relative;
+  z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+  .btn-send {
+    width: 40%;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    margin: 10% auto;
+  }
 }

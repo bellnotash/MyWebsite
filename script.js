@@ -46,3 +46,47 @@ function eraseText(){
 }
 
 window.onload = typeWriter
+
+// Thêm đoạn code này vào cuối file script.js
+
+let prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  let currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.querySelector("nav").style.top = "0";
+  } else {
+    document.querySelector("nav").style.top = "-10vh"; // Điều chỉnh giá trị này nếu cần
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById("contact-modal");
+    const btn = document.getElementById("open-chat-btn");
+    const span = document.getElementsByClassName("close")[0];
+    const form = document.getElementById("contact-form");
+
+    btn.addEventListener('click', function(event) {
+        event.preventDefault();
+        console.log("Button clicked");
+        modal.style.display = "block";
+    });
+
+    span.addEventListener('click', function() {
+        modal.style.display = "none";
+    });
+
+    window.addEventListener('click', function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    });
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        // Xử lý gửi form ở đây (có thể sử dụng AJAX hoặc Fetch API)
+        alert("Message sent successfully!");
+        modal.style.display = "none";
+        form.reset();
+    });
+});
